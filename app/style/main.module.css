@@ -1,0 +1,30 @@
+.title {
+    font-size: 2rem;
+    text-align: center;
+}
+.button {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-size: 1rem;
+    cursor: pointer;
+}   
+.input {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-size: 1rem;
+}
+/* .option {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-size: 1rem;
+} */
+.horizontal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
