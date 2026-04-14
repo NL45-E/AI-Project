@@ -46,7 +46,7 @@ export default function Home() {
             onClick={() => alert("register")}>try register?</button>
         )}
 
-        {option === "about" && (
+        {option === "info" && (
           <p>
             This is a personal website including <i>AI agen</i> created by
             Nabil.R
