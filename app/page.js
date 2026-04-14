@@ -15,6 +15,7 @@ export default function Home() {
     });
     const {reply, option} = await response.json();
     setMessage(reply); setOption(option);
+    setInput("");
   };
   return (
     <>
