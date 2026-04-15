@@ -1,0 +1,3 @@
+define log function as main sender
+otp sended from backend
+search "unimplemented" to looking for the unfinish code 

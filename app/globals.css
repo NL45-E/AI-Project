@@ -18,9 +18,6 @@
     --foreground: #ededed;
   }
 }
-html {
-    scroll-behavior: auto !important;
-}
 body {
   overscroll-behavior: none;
   background: var(--background);
