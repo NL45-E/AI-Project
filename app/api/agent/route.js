@@ -20,12 +20,6 @@ export async function POST(req) {
         bug: ""
       });
     }
-    else if (!input) {
-      return Response.json({
-          reply:"input is required.",
-          option:"false"
-      });
-    }
     // manual classification
     else if (classify(input, ["cara", "login"]) 
       || classify(input, ["cara", "masuk"]) 
@@ -54,7 +48,6 @@ export async function POST(req) {
         prompt(question, input),
         systemPrompt,
       );
-      console.log("checkpoint one (1):  " + reply);
       if (bug) {
         await telegram("bug: " + bug);
         return Response.json({

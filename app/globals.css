@@ -18,8 +18,11 @@
     --foreground: #ededed;
   }
 }
-
+html {
+    scroll-behavior: auto !important;
+}
 body {
+  overscroll-behavior: none;
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, sans-serif;
@@ -30,4 +33,7 @@ body {
   align-content: center;
   margin: 10px;
   gap: 10px;
+}
+body::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
 }

@@ -1,30 +1,99 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
 .title {
     font-size: 2rem;
     text-align: center;
 }
-.button {
+
+.content {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 80px; /* Space for the chat bar */
+}
+
+.chatBar, .bar {
+    
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    display: flex; /* Flexbox enables the gap */
+    align-items: center;
+    justify-content: center;
+    gap: 15px; /* This now controls the space between input and button */
+    box-sizing: border-box;
+    background-color: transparent; /* Adjust as needed */
+}
+.bar {
+    position: fixed;
+    flex-direction: column;
+}
+.input {
+    flex: 1; /* Allows input to take up remaining space */
+    max-width: 600px;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 6px 12px;
+    border-radius: 20px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    outline: none;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1); /* Suggested for white text visibility */
+}
+.input::placeholder {
+    color: white;
+    opacity: 0.7;
+}
+
+.button, .sendButton, .AIbutton {
+    border: 1px solid #0070f3;
+    background-color: #0070f3;
+    color: white;
+    border-radius: 20px;
+    padding: 10px 20px;
     font-size: 1rem;
     cursor: pointer;
-}   
-.input {
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 6px 12px;
-    font-size: 1rem;
+    transition: background 0.2s;
 }
-/* .option {
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 6px 12px;
+.AIbutton {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+}
+.sendButton {
+    border: 1px solid #0070f3;
+    background-color: #0070f3;
+    color: white;
+    border-radius: 20px;
+    padding: 10px 20px;
     font-size: 1rem;
-} */
-.horizontal {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 8px;
+    cursor: pointer;
+    white-space: nowrap; /* Prevents text from wrapping */
+    transition: background 0.2s;
+}
+
+.sendButton:hover {
+    background-color: #0051bb;
+}
+
+.button:hover {
+    background-color: #0051bb;
+}
+.message {
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 5px 15px;
+    word-wrap: break-word;
+}
+.message::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
 }
